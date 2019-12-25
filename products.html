@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Products</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1920px, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/function-products.js"></script>
+</head>
+<body>
+    <div class="modal-buy" id="modalBuy">
+        <div class="dialog-buy" onclick="hiddenBox()">
+        </div>
+            <div class="buy-content w-100">
+                <div class="buy-header w-100">
+                    <img src="images/box-black.png">
+                    <h4 class="title-buy">Your box</h4>
+                    <button onclick="hiddenBox()" type="button" class="close-buy">&times;</button>
+                </div>
+                <div class="buy-body w-100">
+                    
+                    <hr>
+                    <span><p>There're no product for payment!</p></span>
+                    <div class="buy buy-strawberry">
+                        <img src="images/Strawberry 5.png">
+                        <div class="title-product-buy">
+                                <span class="name-product">Sweet Strawberry</span>
+                                <span class="price-product-sm">12.99</span>
+                            
+                            <div id="buyStrawberryBox" class="control-product-buy">
+                                <div  class="buy-product-box ">
+                                    <button class="sub-product" href="">-</button>
+                                    <span class="number-box">0</span>
+                                    <button class="add-product" href="">+</button>
+                                </div>
+                                <span class="count-product">12.99</span>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <hr class="buy-strawberry">
+                    <div class=" buy buy-orange">
+                        <img src="images/Orange-sour.png">
+                        <div class="title-product-buy">
+                                <span class="name-product">SOUR <br>ORANGE</span>
+                                <span class="price-product-sm">12.99</span>
+                            
+                            <div id="buyOrangeBox" class="control-product-buy">
+                                <div  class="buy-product-box ">
+                                    <button class="sub-product" href="">-</button>
+                                    <span class="number-box">0</span>
+                                    <button class="add-product" href="">+</button>
+                                </div>
+                                <span class="count-product">12.99</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr class="buy-orange">
+                    <div class="buy buy-apple">
+                        <img src="images/Applegrand.png">
+                        <div class="title-product-buy">
+                                <span class="name-product">GRAND APPLE</span>
+                                <span class="price-product-sm">12.99</span>
+                            
+                            <div id="buyAppleBox" class="control-product-buy">
+                                <div  class="buy-product-box ">
+                                    <button class="sub-product" href="" >-</button>
+                                    <span class="number-box">0</span>
+                                    <button class="add-product" href="" >+</button>
+                                </div>
+                                <span class="count-product">12.99</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr class="buy-apple">
+                    <div  class="buy buy-classic">
+                        <img src="images/classic-img.png">
+                        <div class="title-product-buy">
+                                <span class="name-product">CLASSIC PREMIUM</span>
+                                <span class="price-product-sm">12.99</span>
+                            
+                            <div id="buyClassicBox"  class="control-product-buy">
+                                <div class="buy-product-box ">
+                                    <button class="sub-product" href="">-</button>
+                                    <span class="number-box">0</span>
+                                    <button class="add-product" href="">+</button>
+                                </div>
+                                <span class="count-product">12.99</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr class=" buy-classic">
+                </div>
+                <div class="buy-footer w-100">
+                    <div class="continue-shopping">
+                        <span>You're 18 bars away from filling your box.</span>
+                        <a href="#strawberry" onclick="hiddenBox()">Continued shopping</a>
+                    </div>
+                    <div class="total-sum" >
+                        <span class="total">TOTAL</span>
+                        <span class="sum">38.97</span>
+                    </div>
+                    <div class="credit-card" >
+                            <span class="credit-title">CREDIT CARD</span>
+                            <span class="card">
+                                <img src="images/AE-card.png">
+                                <img src="images/MC-card.png">
+                                <img src="images/VS-card.png">
+                            </span>
+                        </div>
+                        <div class="card-delivery">
+                            <div class="custom-checkbox-form form-group">
+                                <label class="custom-checkbox checkbox">
+                                        <input type="checkbox"  />
+                                        <span class="default"></span>
+                                    </label>
+                                    <div class="set-defaut">
+                                        Set as default
+                                    </div>
+                                </div>
+                            </div>
+                        <span class="text-alert">This order price does not  include shipping. The shipping cost will be calculated in the next step.</span>
+                        <span class="text-alert">Buy full box with 20 bars or more to get free shipping in Vietnam.   </span>
+                        <button onclick="gotoPayment()" class="btn go-payment" id="gotoPayment" >Add to payment</button>
+                    </div>
+            </div>
+        
+    </div>
+            <div class="modal-menu" id="modalMenuPay">
+                    <div class="dialog-menu">
+                        <div class="modal-content w-100 h-100">
+                            <div class="menu-header w-100">
+                                <img class="menu-logo" src="images/Logo-black.png" onclick="goHome()">
+                                <button type="button" class="close-menu" onclick="hiddenMenu()">&times;</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="menu-body w-100">
+                                <div class="list-link">
+                                    <ul>
+                                        <li><a class="is-checked link-menu" href="#" onclick="goHome()">Home</a></li>
+                                        <li><a class="link-menu" href="#" onclick="goProducts()">products</a></li>
+                                        <li><a class="link-menu" href="#" onclick="goOurStory()">our story</a></li>
+                                        <li><a class="link-menu" href="#" onclick="goFooter()">contact</a></li>
+                                    </ul>
+                                    <span class="footer-link">
+                                        <p>Feel free to contact us by email
+                                            <br>for any enquiries about <strong>LIEBE CHOCO</strong></p>
+                                    </span>
+                                </div>
+                                <div class="menu-img">
+                                    <img src="images/menu-img.png">
+                                </div>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="menu-footer w-100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    <nav class="custorm-bar navbar navbar-expand navbar-custom fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand logo-brand" href="#" onclick="goHome()">
+            <img src="images/Logo-black.png">
+        </a>
+        <!-- Links -->
+        <ul class="navbar-nav group-menu ml-auto">
+            <li class=" nav-item">
+                <a class="nav-link" href="#" id="searchIcon">
+                    <img src="images/looking-black.png">
+                    <input class="hidden-input" type="text" size="30" />
+                </a>
+            </li>
+            <li class="nav-item" id="boxIcon" onclick="showBuyBox()">
+                <button class="nav-link" href="#">
+                    <img  id="boxImg" src="images/box-black.png">
+                </button>
+            </li>
+            <li class="nav-item" id="menuIcon">
+                <a class="nav-link" href="#" id="menuModal" onclick="showMenu()">
+                    <img src="images/menu-black.png">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="contain-product">
+            <img class="crack-chocolate" src="images/crack-chocolate.png">
+        <div class="header-product">
+            <h1 class="text-product-header">
+                SWEET<br>
+STRAWBERRY
+            </h1>
+            <img src="images/fruitchoco-logo-red.png">
+        </div>
+        <div class="real-product">
+            <img class="box" src="images/Strawberry 5.png">
+            <img class="chocolate" src="images/Chocolate 1.png">
+        </div>
+        <div class="detail-product">
+            <h1 id="titleName">SWEET STRAWBERRY</h1>
+            <p id="detailPro">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h1>INGREDIENTS</h1>
+            <p id="detailIngre">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h1>NUTRITIONAL CONTENT/<br>
+                100G</h1>
+            <span>
+                <strong>Energy (kcal)</strong>  .......................................... <strong>554</strong><br>
+                <strong>Fat (g)</strong>  ..........................................................<strong>46</strong> <br>
+                <strong>Carbonhydrates (g)</strong>  ..................................<strong>24</strong><br>
+                <strong>Fibre (g)</strong>  ........................................................ <strong>1</strong><br>
+                <strong>Sugar (g)</strong>   ....................................................... <strong>17</strong><br>
+                <strong>Protein (g) </strong>  .................................................. <strong>9.6</strong><br>
+                <strong>Salt (g)</strong>   ...................................................... <strong>0.02</strong></span>
+
+            
+        </div>
+        
+    </div>
+        
+
+    <div class="taste-it">
+        <h1>JUST TASTE IT</h1>
+        <h3>12.99</h3>
+     
+                <div class="product-add-to-box">
+                        <button id="strawberryAddBox" href="" class="btn add-box is-showing" onclick="addBox()">Add to box</button>
+                        <div id="buyStrawberry" class="btn buy-product is-hidden">
+                            <button class="sub-product" href="" onclick="sub()">-</button>
+                            <span id="numberStrawberry">0</span>
+                            <button class="add-product" href="" onclick="add()">+</button>
+                        </div>
+                    </div>
+
+        <button class="btn next-product" onclick="nextProduct()">NEXT PRODUCT <img src="images/VectorDiscover.png"></button>
+    </div>
+    <footer id="footer">
+        <div class="email-box">
+            <label class="sweeten-box">Sweeten your box</label>
+            <form>
+                <input type="email" placeholder="you@email.com" name="email-1" class="email-input" size="36">
+                <a class="submit-email" href="#">Submit</a>
+            </form>
+
+        </div>
+        <div class="contact-text">contact</div>
+        <div class="detail-text">
+            <h2>ADDRESS</h2>
+            <ul>
+                <li>80 Truc Khe, Dong Da, HaNoi.</li>
+                <li>429, Thuy Khe, Tay Ho, HaNoi.</li>
+            </ul>
+        </div>
+        <div>
+            <div class="logo-spinner">
+                <img src="images/logo parts-02.png">
+                <img class="spinner" src="images/logo parts-01.png">
+            </div>
+
+        </div>
+        <div class="detail-text">
+            <h2>PHONE NUMBER</h2>
+            <ul>
+                <li>+84 397 954 060</li>
+                <li>+84 397 954 060</li>
+            </ul>
+        </div>
+        <div class="detail-text">
+            <h2><br></h2>
+            <ul>
+                <li>&copy Liebe</li>
+            </ul>
+        </div>
+        <div class="detail-text">
+            <h2>MAIL BOX</h2>
+            <ul>
+                <li>liebechoco@gmail.com</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Our Story</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/function.js"></script>
+    
+</head>
+
+<body>
+    <nav class="navbar navbar-expand navbar-custom fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand logo-brand" href="#" onclick="goHomeFromUs()">
+            <img src="images/Logo-white.png">
+        </a>
+
+        <!-- Links -->
+        <ul class="navbar-nav group-menu ml-auto">
+            <li class=" nav-item">
+                <a class="nav-link" href="#" id="searchIcon">
+                    <img src="images/looking-for-icon.png">
+                    <input class="hidden-input" type="text" size="30" />
+                </a>
+            </li>
+            <li class="nav-item" id="boxIcon" onclick="showBuyBox()">
+                <button class="nav-link" href="#">
+                    <img src="images/box.png">
+                </button>
+            </li>
+            <li class="nav-item" id="menuIcon">
+                <a class="nav-link" href="#" id="menuModal">
+                    <img src="images/menu.png">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="modal-buy" id="modalBuy">
+        <div class="dialog-buy" onclick="hiddenBox()">
+        </div>
+            <div class="buy-content w-100">
+                <div class="buy-header w-100">
+                    <img src="images/box-black.png">
+                    <h4 class="title-buy">Your box</h4>
+                    <button onclick="hiddenBox()" type="button" class="close-buy">&times;</button>
+                </div>
+                <div class="buy-body w-100">
+                    
+                    <hr>
+                    <span><p>There're no product for payment!</p></span>
+                    <div class="buy buy-strawberry">
+                        <img src="images/Strawberry 5.png">
+                        <div class="title-product-buy">
+                                <span class="name-product">Sweet Strawberry</span>
+                                <span class="price-product-sm">12.99</span>
+                            
+                            <div id="buyStrawberryBox" class="control-product-buy">
+                                <div  class="buy-product-box ">
+                                    <button class="sub-product" href="">-</button>
+                                    <span class="number-box">0</span>
+                                    <button class="add-product" href="">+</button>
+                                </div>
+                                <span class="count-product">12.99</span>
+                            </div>
+                        </div>
+                       
+                    </div>
+                    <hr class="buy-strawberry">
+                    <div class=" buy buy-orange">
+                        <img src="images/Orange-sour.png">
+                        <div class="title-product-buy">
+                                <span class="name-product">SOUR <br>ORANGE</span>
+                                <span class="price-product-sm">12.99</span>
+                            
+                            <div id="buyOrangeBox" class="control-product-buy">
+                                <div  class="buy-product-box ">
+                                    <button class="sub-product" href="">-</button>
+                                    <span class="number-box">0</span>
+                                    <button class="add-product" href="">+</button>
+                                </div>
+                                <span class="count-product">12.99</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr class="buy-orange">
+                    <div class="buy buy-apple">
+                        <img src="images/Applegrand.png">
+                        <div class="title-product-buy">
+                                <span class="name-product">GRAND APPLE</span>
+                                <span class="price-product-sm">12.99</span>
+                            
+                            <div id="buyAppleBox" class="control-product-buy">
+                                <div  class="buy-product-box ">
+                                    <button class="sub-product" href="" >-</button>
+                                    <span class="number-box">0</span>
+                                    <button class="add-product" href="" >+</button>
+                                </div>
+                                <span class="count-product">12.99</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr class="buy-apple">
+                    <div  class="buy buy-classic">
+                        <img src="images/classic-img.png">
+                        <div class="title-product-buy">
+                                <span class="name-product">CLASSIC PREMIUM</span>
+                                <span class="price-product-sm">12.99</span>
+                            
+                            <div id="buyClassicBox"  class="control-product-buy">
+                                <div class="buy-product-box ">
+                                    <button class="sub-product" href="">-</button>
+                                    <span class="number-box">0</span>
+                                    <button class="add-product" href="">+</button>
+                                </div>
+                                <span class="count-product">12.99</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <hr class=" buy-classic">
+                </div>
+                <div class="buy-footer w-100">
+                    <div class="continue-shopping">
+                        <span>You're 18 bars away from filling your box.</span>
+                        <a href="#strawberry" onclick="hiddenBox()">Continued shopping</a>
+                    </div>
+                    <div class="total-sum" >
+                        <span class="total">TOTAL</span>
+                        <span class="sum">38.97</span>
+                    </div>
+                    <div class="credit-card" >
+                            <span class="credit-title">CREDIT CARD</span>
+                            <span class="card">
+                                <img src="images/AE-card.png">
+                                <img src="images/MC-card.png">
+                                <img src="images/VS-card.png">
+                            </span>
+                        </div>
+                        <div class="card-delivery">
+                            <div class="custom-checkbox-form form-group">
+                                <label class="custom-checkbox checkbox">
+                                        <input type="checkbox"  />
+                                        <span class="default"></span>
+                                    </label>
+                                    <div class="set-defaut">
+                                        Set as default
+                                    </div>
+                                </div>
+                            </div>
+                        <span class="text-alert">This order price does not  include shipping. The shipping cost will be calculated in the next step.</span>
+                        <span class="text-alert">Buy full box with 20 bars or more to get free shipping in Vietnam.   </span>
+                        <button onclick="gotoPayment()" class="btn go-payment" id="gotoPayment" >Add to payment</button>
+                    </div>
+            </div>
+        
+    </div>
+    <div class="modal-menu" id="modalMenu">
+        <div class="dialog-menu">
+            <div class="modal-content w-100 h-100">
+                <div class="menu-header w-100">
+                    <img class="menu-logo" src="images/Logo-black.png" onclick="goHomeFromUs()">
+                    <button type="button" class="close-menu">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="menu-body w-100">
+                    <div class="list-link">
+                        <ul>
+                            <li><a class="is-checked link-menu" href="#" onclick="goHomeFromUs()">Home</a></li>
+                            <li><a class="link-menu" href="#" onclick="goToProductsFromUs()">products</a></li>
+                            <li><a class="link-menu" href="#" onclick="goOurStoryFromSelf()">our story</a></li>
+                            <li><a class="link-menu" href="#" onclick="goFooter()">contact</a></li>
+                        </ul>
+                        <span class="footer-link">
+                            <p>Feel free to contact us by email
+                                <br>for any enquiries about <strong>LIEBE CHOCO</strong></p>
+                        </span>
+                    </div>
+                    <div class="menu-img">
+                        <img src="images/menu-img.png">
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="menu-footer w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home-video">
+        <div id="homeVideo"></div>
+        <div class="cover-story cover-video"></div>
+        <div class="bg-story">
+            <img src="images/our-story-bg.png">
+        </div>
+        <div class="cover-text">
+            <span id="our-story-text">OUR STORY</span>
+        </div>
+        <a class="discover" href="#strawberry">
+            <div class="eclipse-vector">
+                <img src="images/Ellipse.png">
+                <img class="vector" src="images/VectorDiscover.png">
+            </div>
+            <span class="discover-text">Discover</span>
+        </a>
+    </div> 
+    <div id="strawberry" class="goContainer"></div>
+    <div class="container-fluid ">
+        <div class="grid-2">
+            <div class="abous-us-text left ">
+            <h1>ABOUT US</h1>
+            <p>Trung Dung left a successful design career in New York to find himself in Vietnam. Instead, he found Phong Vu, a recovering banker living in Saigon with his wife and two kids. During a camping trip in the jungle in 2010, they quickly decided to make a break for it. Liebe Choco was among the first “bean to bar” concerns in Asia and one of the few in the world to make chocolate at origin. What began as a dream for two wayward Vietnamese has snowballed into a brand of pure dark chocolate entirely made from Vietnam’s finest ingredients.</p>
+            </div>
+            <div class="right ">
+                <img src="images/img-about-us.png">
+            </div>
+        </div>
+        <div class="grid-2">
+                <div class="make-chocolate-text left ">
+                <h1>HOW WE <br>
+                        MAKE CHOCOLATE</h1>
+                <p>Liebe is involved in every stage of its chocolate making process. Here’s a rough play-by-play of how cacao goes from bean to bar in Vietnam.</p>
+                </div>
+                <div class="right ">
+                    <img src="images/make-chocolate-img.png">
+                </div>
+            </div>
+            <div class="grid-2">
+                    <div class="cacao-vietnam-text left ">
+                    <h1>CACAO & CHOCOLATE<br>
+                            IN VIET NAM</h1>
+                    <p>Vietnam was recognized as a fine-flavored origin for cacao seekers. Thanks, in no small part to the free advertising offered by Liebe, cacao junkies began showing up in Vietnam looking for its distinct and spicy beans.
+                            We hope our chocolate continues to testify to the Vietnam’s resilience, richness and indefatigable spirit.</p>
+                    </div>
+                    <div class="right ">
+                        <img src="images/caocao-vietnam-img.png">
+                    </div>
+                </div>
+                </div>
+    <footer id="footer">
+        <div class="email-box">
+            <label class="sweeten-box">Sweeten your box</label>
+            <form>
+                <input type="email" placeholder="you@email.com" name="email-1" class="email-input" size="36">
+                <a class="submit-email" href="#">Submit</a>
+            </form>
+
+        </div>
+        <div class="contact-text">contact</div>
+        <div class="detail-text">
+            <h2>ADDRESS</h2>
+            <ul>
+                <li>80 Truc Khe, Dong Da, HaNoi.</li>
+                <li>429, Thuy Khe, Tay Ho, HaNoi.</li>
+            </ul>
+        </div>
+        <div>
+            <div class="logo-spinner">
+                <img src="images/logo parts-02.png">
+                <img class="spinner" src="images/logo parts-01.png">
+            </div>
+
+        </div>
+        <div class="detail-text">
+            <h2>PHONE NUMBER</h2>
+            <ul>
+                <li>+84 397 954 060</li>
+                <li>+84 397 954 060</li>
+            </ul>
+        </div>
+        <div class="detail-text">
+            <h2><br></h2>
+            <ul>
+                <li>&copy Liebe</li>
+            </ul>
+        </div>
+        <div class="detail-text">
+            <h2>MAIL BOX</h2>
+            <ul>
+                <li>liebechoco@gmail.com</li>
+            </ul>
+        </div>
+    </footer>
+    </body>
+    </html>
