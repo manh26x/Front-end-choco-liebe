@@ -12,8 +12,7 @@ pipeline {
             steps {
                 publishHTML target: [
             keepAll: true,
-            reportFiles: 'index.html',
-            reportName: 'RCov Report'
+            reportFiles: 'index.html'
           ]
             }
         }
