@@ -10,7 +10,11 @@ pipeline {
               }
             }
             steps {
-                sh 'make publish'
+                publishHTML target: [
+            keepAll: true,
+            reportFiles: 'index.html',
+            reportName: 'RCov Report'
+          ]
             }
         }
     }
