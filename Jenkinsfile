@@ -9,7 +9,7 @@ pipeline {
               }
             }
             steps {
-                sh 'make publish'
+                sh 'echo 1'
             }
         }
     }
