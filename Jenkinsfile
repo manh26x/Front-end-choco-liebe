@@ -2,12 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
+        stage('Deploy') {
+            when {
+              expression {
+                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+              }
+            }
             steps {
-                /* `make check` returns non-zero on test failures,
-                * using `true` to allow the Pipeline to continue nonetheless
-                */
-
+                sh 'make publish'
             }
         }
     }
